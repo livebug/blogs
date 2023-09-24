@@ -2,9 +2,7 @@
 title: sql 语言脚本
 date: 2023-08-27 23:48:19
 toc: true 
-tags:
-- sql
-- vscode
+tags: ["sql","vscode-extension"]
 ---
 
 语法突出显示指南：VS Code 使用文本伴侣(TextMate)语法进行语法突出显示。本指南将引导您编写简单的 TextMate 语法并将其转换为 VS Code 扩展。
