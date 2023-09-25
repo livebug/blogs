@@ -10,25 +10,25 @@ tags: ["sql","vscode-extension"]
 ## TextMate 语法
 
 ```
- 1  {  scopeName = 'source.untitled';
- 2     fileTypes = ( );
- 3     foldingStartMarker = '\{\s*$';
- 4     foldingStopMarker = '^\s*\}';
- 5     patterns = (
- 6        {  name = 'keyword.control.untitled';
- 7           match = '\b(if|while|for|return)\b';
- 8        },
- 9        {  name = 'string.quoted.double.untitled';
-10           begin = '"';
-11           end = '"';
-12           patterns = ( 
-13              {  name = 'constant.character.escape.untitled';
-14                 match = '\\.';
-15              }
-16           );
-17        },
-18     );
-19  }
+{  scopeName = 'source.untitled';
+   fileTypes = ( );
+   foldingStartMarker = '\{\s*$';
+   foldingStopMarker = '^\s*\}';
+   patterns = (
+      {  name = 'keyword.control.untitled';
+         match = '\b(if|while|for|return)\b';
+      },
+      {  name = 'string.quoted.double.untitled';
+         begin = '"';
+         end = '"';
+         patterns = ( 
+            {  name = 'constant.character.escape.untitled';
+               match = '\\.';
+            }
+         );
+      },
+   );
+}
 ```
 
 语言语法用于为文档元素（如关键字、注释、字符串或类似元素）分配名称。这样做的目的是允许样式（语法突出显示），并使文本编辑器“智能”了解插入符号所在的上下文。例如，您可能希望击键或制表符触发器根据上下文采取不同的操作，或者您可能希望在键入文本文档中非散文的部分（例如.HTML标签）时禁用拼写检查。
