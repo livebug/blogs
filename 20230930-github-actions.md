@@ -44,3 +44,6 @@ jobs:
           publish_dir: ./public
           publish_branch: master
 ```
+
+## 子库提交，父库刷新触发action，并重新部署
+
