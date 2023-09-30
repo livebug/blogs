@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with: 
-          repository: livebug/myblogs
+          repository: livebug/myblog
           token: ${{ secrets.PERSONAL_TOKEN }}
           submodules: true
 
