@@ -13,7 +13,35 @@ toc: true
 
 ## 开发`myblog`仓库的提交 actions
 
-```yaml
+```yml
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+name: Deploy Hugo site to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
 jobs:
   # Build job
   public:
@@ -47,3 +75,39 @@ jobs:
 
 ## 子库提交，父库刷新触发action，并重新部署
 
+1. 基础道理，提交到`blogs`中，触发仓库中的`action`，重新提交父库
+
+2. 提交父库时，会触发父库的`action`，自动重新部署
+
+```yml
+name: Send submodule updates to parent repo
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2  # 检出父库
+        with: 
+          repository: livebug/myblog
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          submodules: true
+
+      - name: Pull & update submodules recursively # 更新子库
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
+
+      - name: Commit      # 父库提交
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions - update submodules"
+          git add --all
+          git commit -m "Update submodules" || echo "No changes to commit"
+          git push
+```
