@@ -1,20 +1,23 @@
 ---
-title: fedora 安装 docker
+title: fedora安装docker
 date: 2023-04-26 23:38:56
+toc: true
 tags:
 - docker
+- gauss
+- fedora
+- linux
 ---
-### 安装参考教程连接
-https://help.aliyun.com/document_detail/264695.html?spm=5176.21213303.J_6028563670.38.3acf3eda1H4cBI&scm=20140722.S_help%40%40%E6%96%87%E6%A1%A3%40%40264695.S_hot.ID_264695-RL_docker%E5%AE%89%E8%A3%85-OR_s%2Bhelpmain-V_1-P0_7
+*[安装参考教程连接](https://help.aliyun.com/document_detail/264695.html?spm=5176.21213303.J_6028563670.38.3acf3eda1H4cBI&scm=20140722.S_help%40%40%E6%96%87%E6%A1%A3%40%40264695.S_hot.ID_264695-RL_docker%E5%AE%89%E8%A3%85-OR_s%2Bhelpmain-V_1-P0_7)*  
 
-#### 简单记录
+### 简单记录
 1. 安装dnf源中默认的Docker（podman-docker）
 ```bash
 # 运行以下命令，安装podman-docker。
-    dnf -y install docker
+dnf -y install docker
 # 运行以下命令，查看Docker是否安装成功。
-    docker images
-
+docker images
+ 
 ```
 
 ### 权限问题
@@ -58,9 +61,9 @@ SELECT * FROM pg_stat_activity ;
 ```
 
 
-## opengauss 配置 odbc 
+### opengauss 配置 odbc 
 fedora 直接安装  
-```
+```bash
 sudo dnf install unixODBC
 ```
 

@@ -1,8 +1,8 @@
 ---
-title: sql 语言脚本
+title: sql语言脚本开发-语法突出 
 date: 2023-08-27 23:48:19
 toc: true 
-tags: ["sql","vscode-extension"]
+tags: ["sql","vscode-extension","vscode"]
 ---
 
 语法突出显示指南：VS Code 使用文本伴侣(TextMate)语法进行语法突出显示。本指南将引导您编写简单的 TextMate 语法并将其转换为 VS Code 扩展。
@@ -57,8 +57,6 @@ tags: ["sql","vscode-extension"]
 
 
 + repository — 规则的字典（即.key/值对），可以从语法中的其他地方包含。键是规则的名称，值是实际规则。 include 规则键的说明（和示例）之后是进一步的说明。
-
-
 
 注入语言嵌入式语言还有一个额外的复杂性：默认情况下，VS Code 将字符串中的所有标记视为字符串内容，将带有注释的所有标记视为标记内容。由于括号匹配和自动结束对等功能在字符串和注释中被禁用，因此如果嵌入语言出现在字符串或注释中，这些功能也将在嵌入语言中被禁用。
 

@@ -1,6 +1,7 @@
 ---
-title: gitee 增加 ssh key 实现免密访问
+title: gitee增加ssh 实现免密访问
 date: 2023-09-22 23:48:19
+toc: true
 tags:
 - ssh
 - gitee 
@@ -34,3 +35,9 @@ SSH 叫安全外壳协议（Secure Shell），是一种加密的网络传输协�
 
 总之 ：A要免密码登录到B，B首先要拥有A的公钥，然后B要做一次加密验证。对于非对称加密，公钥加密的密文不能公钥解开，只能私钥解开。
 
+
+--- 
+
++ SSH使用 
+  + [第一篇 - SSH 使用]({{< ref "20230827-ssh-connect.md" >}} "SSH 使用")
+  + [第二篇 -  gitee SSH免密登录 ]({{< ref "20230922-gitee-add-sshkey.md" >}} "SSH 使用")

@@ -1,8 +1,10 @@
 ---
-title: 在CentOS/RHEL 7中打开Samba端口
+title: fedora打开Samba端口
 date: 2023-04-25 10:36:21
+toc: true
 tags:
 - fedora
+- linux
 - samba
 ---
 来源：  
