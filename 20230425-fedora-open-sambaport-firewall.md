@@ -6,6 +6,7 @@ tags:
 - fedora
 - linux
 - samba
+categories: ['技术博客']
 ---
 来源：  
 https://www.linuxprobe.com/fedora-centos-samba.html 

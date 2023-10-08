@@ -5,6 +5,7 @@ toc: true
 # draft : true
 tags :
 - antlr4
+categories: ['技术博客']
 ---
 
 ## antlr 安装

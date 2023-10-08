@@ -5,6 +5,7 @@ toc: true
 # draft : true
 tags :
 - css 
+categories: ['技术博客']
 ---
 <p>查阅后才知道，<strong><code>用户代理样式表</code>是浏览器（例如，Chrome，Firefox，Edge 等）提供的“默认样式表”</strong>，<strong>用于以满足“一般显示期望”的方式显示页面</strong>。</p>
 

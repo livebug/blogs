@@ -5,6 +5,7 @@ toc: true
 tags:
 - linux
 - fedora
+categories: ['技术博客']
 ---
 ## fedora 安装之后的操作
 

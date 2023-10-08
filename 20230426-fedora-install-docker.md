@@ -7,6 +7,7 @@ tags:
 - gauss
 - fedora
 - linux
+categories: ['技术博客']
 ---
 *[安装参考教程连接](https://help.aliyun.com/document_detail/264695.html?spm=5176.21213303.J_6028563670.38.3acf3eda1H4cBI&scm=20140722.S_help%40%40%E6%96%87%E6%A1%A3%40%40264695.S_hot.ID_264695-RL_docker%E5%AE%89%E8%A3%85-OR_s%2Bhelpmain-V_1-P0_7)*  
 

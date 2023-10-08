@@ -7,6 +7,7 @@ tags:
 - nvm
 - nodejs
 - linux
+categories: ['技术博客']
 ---
 
 ## 安装 nodejs 环境

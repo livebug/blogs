@@ -5,6 +5,7 @@ toc: true
 tags:
 - ssh
 - linux
+categories: ['技术博客']
 ---
 
 ## SSH 简单介绍

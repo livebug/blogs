@@ -5,6 +5,7 @@ toc: true
 tags:
 - ssh
 - gitee 
+categories: ['技术博客']
 ---
 
 ## 前言
