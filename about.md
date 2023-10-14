@@ -55,4 +55,4 @@ github page:
 
 4. 历史文章迁移
 
-5. 🆗 文章生成脚本文件名带日期  [自定义新增文章脚本]({{< ref "20231014-hugo-new-content.md" >}} "hugo new content 命令使用 & 自定义新增文章脚本"
+5. 🆗 文章生成脚本文件名带日期  [自定义新增文章脚本]({{< ref "20231014-hugo-new-content.md" >}} "hugo new content 命令使用 & 自定义新增文章脚本")
