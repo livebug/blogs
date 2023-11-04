@@ -113,3 +113,7 @@ jobs:
           git commit -m "Update submodules" || echo "No changes to commit"
           git push
 ```
+
+
+## action 认证失败
+需要重新刷新一下密钥，因为生成密钥时选择了期限，重新在仓库变量那重新输入刷新一下
