@@ -67,3 +67,35 @@ https://source.dot.net/  源码查看网站
 
 [ASP.NET Core 认证与授权[1]:初识认证](https://www.cnblogs.com/RainingNight/p/introduce-basic-authentication-in-asp-net-core.html#microsoft.aspnetcore.authentication)
 
+
+
+## linux 上使用 dotnet dev-certs 命令是失败的，处理办法官网已经给了办法！
+https://learn.microsoft.com/zh-cn/aspnet/core/security/enforcing-ssl?view=aspnetcore-8.0&tabs=visual-studio%2Clinux-ubuntu#ubuntu-trust-the-certificate-for-service-to-service-communication
+
+以下说明不适用于某些 Ubuntu 版本，例如 20.04。 有关详细信息，请参阅 GitHub 问题 dotnet/AspNetCore.Docs #23686。
+
+安装 OpenSSL 1.1.1h 或更高版本。 有关如何更新 OpenSSL 的说明，请参阅你的发行版。
+
+运行以下命令：
+```bash
+dotnet dev-certs https
+sudo -E dotnet dev-certs https -ep /usr/local/share/ca-certificates/aspnet/https.crt --format PEM
+sudo update-ca-certificates
+```
+
+前面的命令：
+
+确保创建了当前用户的开发人员证书。  
+使用当前用户的环境导出具有 ca-certificates 文件夹所需的提升权限的证书。  
+删除 -E 标志会导出根用户证书，并根据需要生成它。 每个新生成的证书都有不同的指纹。 以根用户身份运行时，不需要 sudo 和 -E。
+上述命令中的路径特定于 Ubuntu。 对于其他发行版，请选择相应的路径或使用证书颁发机构 (CA) 的路径。
+
+
+## c# launchsettings.json profiles 顺序c# launchsettings.json 配置文件顺序
+首先会按环境区分，生产还是开发  
+默认执行同项目名的配置，然后根据前后顺序  
+
+可以在项目运行时指定：
+```bash
+dotnet run --launch-Profile <name>
+```
