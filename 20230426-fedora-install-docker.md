@@ -23,9 +23,14 @@ docker images
 
 ### 权限问题
 ```bash
-sudo gpasswd -a $USER docekr 
+sudo gpasswd -a $USER docker 
 newgrp docker 
 docker ps -a
+
+# 调整权限
+# permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock:
+$ sudo chmod a+rw /var/run/docker.sock
+$ sudo service docker restart
 ```
 
 
