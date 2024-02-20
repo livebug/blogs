@@ -78,10 +78,12 @@ https://learn.microsoft.com/zh-cn/aspnet/core/security/enforcing-ssl?view=aspnet
 
 运行以下命令：
 ```bash
+dotnet dev-certs https --clean
 dotnet dev-certs https
 sudo -E dotnet dev-certs https -ep /usr/local/share/ca-certificates/aspnet/https.crt --format PEM
 sudo update-ca-certificates
 ```
+> 20240220修改 : 在 wsl 中没起作用 很奇怪
 
 前面的命令：
 
