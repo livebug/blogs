@@ -84,6 +84,7 @@ sudo -E dotnet dev-certs https -ep /usr/local/share/ca-certificates/aspnet/https
 sudo update-ca-certificates
 ```
 > 20240220修改 : 在 wsl 中没起作用 很奇怪
+> 20240221 因为linux本机的代理导致的https访问问题，把代理停掉就好了，或者增加https的代理
 
 前面的命令：
 
